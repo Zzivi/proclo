@@ -17,6 +17,8 @@ gem 'turbolinks',   '2.3.0'
 gem 'jbuilder',     '2.2.3'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc',         '0.4.0', group: :doc
+# AWS Elastic Beanstalk dependency
+gem 'puma',         '2.14.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -27,5 +29,7 @@ group :development, :test do
   gem 'spring',      '1.1.3'
 end
 
-
+group :production do
+  gem 'pg',             '0.17.1'
+end
 
