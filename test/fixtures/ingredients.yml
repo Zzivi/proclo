@@ -11,3 +11,9 @@ orange:
 car:
   name: car
   description: This is not an ingredient!
+
+<% 30.times do |n| %>
+ingredient_<%= n %>:
+  name:  <%= "Ingredient-#{n}" %>
+  description: <%= "Ingredient-#{n} description" %>
+<% end %>

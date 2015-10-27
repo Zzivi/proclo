@@ -32,4 +32,12 @@ class IngredientsControllerTest < ActionController::TestCase
     assert_redirected_to root_url
     assert_equal 'Ingredient deleted!', flash[:success]
   end
+
+  test "index" do
+    get :index
+    assert_select 'div.pagination'
+    Ingredient.paginate(page: 1).each do |ingredient|
+      assert_select 'a[href=?]', ingredient_path(ingredient), text: ingredient.name
+    end
+  end
 end
