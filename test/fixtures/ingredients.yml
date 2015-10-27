@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  description: MyString
+lettuce:
+  name: lettuce
+  description: Green vegetable
 
-two:
-  name: MyString
-  description: MyString
+orange:
+  name: orange
+  description: Orange fruit
+
+car:
+  name: car
+  description: This is not an ingredient!

@@ -1,1 +1,3 @@
 <%= @ingredient.name %>, <%= @ingredient.description %>
+<%= link_to "delete", @ingredient, method: :delete,
+                                       data: { confirm: "You sure?" } %>
