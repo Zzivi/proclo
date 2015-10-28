@@ -35,8 +35,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'sqlite3',     '1.3.9'
-  # AWS Elastic Beanstalk dependency
-  gem 'puma',           '2.14.0'
+  gem 'pg',   '0.18.3'
+  gem 'puma', '2.14.0'
 end
 
