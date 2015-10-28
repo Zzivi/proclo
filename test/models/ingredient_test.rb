@@ -2,7 +2,7 @@ require 'test_helper'
 
 class IngredientTest < ActiveSupport::TestCase
   def setup
-    @ingredient = Ingredient.new(name: "Lettuce", description: "Green plant")
+    @ingredient = ingredients(:lettuce)
   end
 
   test "should be valid" do
