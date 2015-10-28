@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+99.times do |n|
+  name  = Faker::Lorem.word + "#{n}"
+  description = Faker::Lorem.sentence
+  Ingredient.create!(name:  name,
+               description: description)
+end

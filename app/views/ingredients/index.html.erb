@@ -1,0 +1,12 @@
+<% provide(:title, 'All ingredients') %>
+<h1>All ingredients</h1>
+
+<%= will_paginate %>
+
+<ul class="ingredients">
+  <% @ingredients.each do |ingredient| %>
+    <%= render ingredient %>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
