@@ -1,0 +1,37 @@
+EnvironmentConfigurationMetadata:
+  Description: Configuration created from the EB CLI using "eb config save".
+  DateCreated: '1446494808000'
+  DateModified: '1446494808000'
+SolutionStack: 64bit Amazon Linux 2015.03 v2.0.1 running Ruby 2.2 (Puma)
+OptionSettings:
+  aws:elasticbeanstalk:command:
+    BatchSize: '30'
+    BatchSizeType: Percentage
+  aws:elb:policies:
+    ConnectionDrainingEnabled: true
+  aws:elb:healthcheck:
+    Interval: '30'
+  aws:elasticbeanstalk:application:environment:
+    SECRET_KEY_BASE: e12013988746699cb8fcfdb87838f05bfb453c73ab1d53787666c4669e5a0439c58af99fbe7c777d3a48e1130d4fc3f01ec744eda45caecb9a7273385c8b55d6
+  aws:elb:loadbalancer:
+    CrossZone: true
+  aws:autoscaling:launchconfiguration:
+    IamInstanceProfile: aws-elasticbeanstalk-ec2-role
+    InstanceType: t2.micro
+  aws:rds:dbinstance:
+    DBEngineVersion: 9.4.4
+    DBPassword: MySuperPassword
+    DBEngine: postgres
+    DBUser: ebroot
+    DBDeletionPolicy: Snapshot
+  aws:autoscaling:updatepolicy:rollingupdate:
+    RollingUpdateType: Health
+    RollingUpdateEnabled: true
+EnvironmentTier:
+  Type: Standard
+  Name: WebServer
+Extensions:
+  RdsExtensionEB:
+    Order: 10000
+    SourceLocation: https://s3.amazonaws.com/elasticbeanstalk-env-resources-eu-west-1/eb_snippets/rds/rds.json
+AWSConfigurationTemplateVersion: 1.1.0.0
