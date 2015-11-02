@@ -19,9 +19,7 @@
 # Ignore Spring files.
 /spring/*.pid
 
--# Elastic Beanstalk Files
--.elasticbeanstalk/*
--.elasticbeanstalk/saved_configs/*.yml
--!.elasticbeanstalk/config.yml
--!.elasticbeanstalk/*.cfg.yml
--!.elasticbeanstalk/*.global.yml
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
