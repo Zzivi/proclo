@@ -1,17 +1,11 @@
 == README
 This application uses AWS Elastic Beanstalk.
 
-<p>
 To create the application for first time you have to run <tt> eb init </tt> in the project root directory and follow de wizard.
-</p>
 
-<p>
 To create a new environment in the application run the command
 <tt> eb create --cfg test  --timeout 30 </tt>. This will create a prod type environment with a postgresql rds as a database.
 If you want to set a different password or a secret key (for a PROD environment) you can pass them as parameters:
 <tt> eb create --cfg test  --timeout 30 --envvars SECRET_KEY_BASE=`rake secret` --database.password=MyDaniPassword </tt>.
-</p>
 
-<p>
-To deploy changes to an existing environment run <tt> eb deploy </tt>
-</p> 
+To deploy changes to an existing environment run <tt> eb deploy </tt>.
