@@ -22,7 +22,7 @@ OptionSettings:
     DBEngineVersion: 9.4.4
     DBPassword: MySuperPassword
     DBEngine: postgres
-    DBUser: ebroot
+    DBUser: procloroot
     DBDeletionPolicy: Snapshot
   aws:autoscaling:updatepolicy:rollingupdate:
     RollingUpdateType: Health
