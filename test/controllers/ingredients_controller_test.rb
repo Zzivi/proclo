@@ -43,7 +43,7 @@ class IngredientsControllerTest < ActionController::TestCase
       delete :destroy, id: @ingredient
     end
     assert_redirected_to root_url
-    assert_equal 'Ingredient deleted!', flash[:success]
+    assert_equal I18n.t('ingredients.destroy.delete_ingredient'), flash[:success]
   end
 
   test "should get show" do

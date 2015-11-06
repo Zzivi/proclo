@@ -25,3 +25,5 @@ es:
       new_ingredient: "Nuevo ingrediente añadido"
     update:
       updated_ingredient: "Ingrediente modificado"
+    destroy:
+      delete_ingredient: "Ingredient eliminado"
