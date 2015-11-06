@@ -20,4 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  ingredients:
+    create:
+      new_ingredient: "New ingredient added"
+    update:
+      updated_ingredient: "Ingredient updated"

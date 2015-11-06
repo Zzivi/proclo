@@ -35,7 +35,7 @@ class IngredientsControllerTest < ActionController::TestCase
                                   description: "Example ingredient"}
     end
     assert_redirected_to ingredient_path(assigns(:ingredient))
-    assert_equal 'New ingredient added!', flash[:success]
+    assert_equal I18n.t('ingredients.create.new_ingredient'), flash[:success]
   end
 
   test "valid delete ingredient" do
@@ -61,7 +61,7 @@ class IngredientsControllerTest < ActionController::TestCase
   test "valid update ingredient" do
     patch :update, id: @ingredient, ingredient: { name: "newname", description: "newdescription" }
     assert_redirected_to ingredient_path(assigns(:ingredient))
-    assert_equal 'Ingredient updated!', flash[:success]
+    assert_equal I18n.t('ingredients.update.updated_ingredient'), flash[:success]
   end
 
   test "invalid update ingredient with existing name" do
