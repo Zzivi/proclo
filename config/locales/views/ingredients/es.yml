@@ -19,11 +19,11 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+es:
   ingredients:
-    create:
-      new_ingredient: "New ingredient added"
-    update:
-      updated_ingredient: "Ingredient updated"
-    destroy:
-      delete_ingredient: "Ingredient deleted"
+    index:
+      title: "Listado de ingredientes"
+    new:
+      title: "Añadir ingrediente"
+    edit:
+      title: "Editar ingrediente"

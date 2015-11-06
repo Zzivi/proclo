@@ -21,9 +21,9 @@
 
 en:
   ingredients:
-    create:
-      new_ingredient: "New ingredient added"
-    update:
-      updated_ingredient: "Ingredient updated"
-    destroy:
-      delete_ingredient: "Ingredient deleted"
+    index:
+      title: "Ingredients list"
+    new:
+      title: "Add ingredient"
+    edit:
+      title: "Edit ingredient"

@@ -5,6 +5,14 @@ class IngredientsControllerTest < ActionController::TestCase
   def setup
     @ingredient       = ingredients(:lettuce)
     @other_ingredient = ingredients(:orange)
+    @base_title = I18n.t('base_title')
+  end
+
+  test "should get index" do
+    get :index
+    assert_response :success
+    assert_select 'title', "#{I18n.t('ingredients.index.title')} | #{@base_title}"
+    assert_select 'h1', I18n.t('ingredients.index.title')
   end
 
   test "index" do
@@ -19,6 +27,8 @@ class IngredientsControllerTest < ActionController::TestCase
   test "should get new" do
     get :new
     assert_response :success
+    assert_select 'title', "#{I18n.t('ingredients.new.title')} | #{@base_title}"
+    assert_select 'h1', I18n.t('ingredients.new.title')
   end
 
   test "invalid add ingredient" do
@@ -55,6 +65,8 @@ class IngredientsControllerTest < ActionController::TestCase
 
   test "should get edit" do
     get :edit, id: @ingredient
+    assert_select 'title', "#{I18n.t('ingredients.edit.title')} | #{@base_title}"
+    assert_select 'h1', I18n.t('ingredients.edit.title')
     assert_response :success
   end
 
