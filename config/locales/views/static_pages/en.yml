@@ -22,6 +22,7 @@
 en:
   static_pages:
     home:
+      title: "Home"
       header: "Proclo App"
       introduction: "This is the home page for the Proclo application."
       list_of_ingredients: "List of current ingredients:"

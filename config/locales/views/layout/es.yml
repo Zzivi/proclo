@@ -20,18 +20,5 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
-  static_pages:
-    home:
-      title: "Inicio"
-      header: "Aplicación de Proclo"
-      introduction: "Esta es la página principal de la apliación de Proclo."
-      list_of_ingredients: "Lista de los ingredientes actuales:"
-      add_new_ingredient: "Añade un nuevo ingrediente:"
-    help:
-      title: "Ayuda"
-      header: "Ayuda header"
-      content: "Ayuda page content"
-    about:
-      title: "Sobre"
-      header: "Sobre header"
-      content: "Contenido de la pagina de Sobre"
+  layout:
+    footer: "La aplicación de proclo por Zzivi"
