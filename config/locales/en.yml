@@ -1,6 +1,5 @@
 # Translations used around the application
 en:
-  #views
   base_title: "Proclo App"
   you_sure: "Are you sure?"
   delete: "Delete"
