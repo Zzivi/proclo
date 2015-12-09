@@ -2,8 +2,11 @@
 en:
   base_title: "Proclo App"
   you_sure: "Are you sure?"
+  save_changes: "Save changes"
   delete: "Delete"
   edit: "Edit"
+  add: "Add"
+
 
   will_paginate:
     previous_label: "&#8592; Previous"

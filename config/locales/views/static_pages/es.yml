@@ -23,6 +23,9 @@ es:
   static_pages:
     home:
       header: "Aplicación de Proclo"
+      introduction: "Esta es la página principal de la apliación de Proclo."
+      list_of_ingredients: "Lista de los ingredientes actuales:"
+      add_new_ingredient: "Añade un nuevo ingrediente:"
     help:
       title: "Ayuda"
       header: "Ayuda header"

@@ -25,5 +25,7 @@ en:
       title: "Ingredients list"
     new:
       title: "Add ingredient"
+      create_ingredient: "Create my ingredient"
     edit:
       title: "Edit ingredient"
+

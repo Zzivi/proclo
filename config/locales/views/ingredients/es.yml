@@ -25,5 +25,6 @@ es:
       title: "Listado de ingredientes"
     new:
       title: "Añadir ingrediente"
+      create_ingredient: "Crear mi ingrediente"
     edit:
       title: "Editar ingrediente"

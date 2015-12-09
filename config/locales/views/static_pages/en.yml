@@ -23,6 +23,9 @@ en:
   static_pages:
     home:
       header: "Proclo App"
+      introduction: "This is the home page for the Proclo application."
+      list_of_ingredients: "List of current ingredients:"
+      add_new_ingredient: "Add new ingredient:"
     help:
       title: "Help"
       header: "Help page header"
