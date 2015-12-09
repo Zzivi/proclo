@@ -22,8 +22,12 @@
 en:
   static_pages:
     home:
-      title: "Proclo App"
+      header: "Proclo App"
     help:
-      title: "Help | Proclo App"
+      title: "Help"
+      header: "Help page header"
+      content: "Help page content"
     about:
-      title: "About | Proclo App"
+      title: "About"
+      header: "About page header"
+      content: "About page content"
