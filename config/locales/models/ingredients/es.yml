@@ -1,0 +1,6 @@
+es:
+  activerecord:
+    attributes:
+      ingredient:
+        name: "Nombre"
+        description: "Descripción"
