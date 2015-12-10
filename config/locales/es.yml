@@ -12,3 +12,10 @@ es:
     previous_label: "&#8592; Anterior"
     next_label: "Siguiente &#8594;"
     page_gap: "&hellip;"
+
+  activerecord:
+    errors:
+      messages:
+        blank: "no puede estar vacío"
+        taken: "ya ha sido elegido"
+        too_long: "es demasiado largo (máximo es %{count} carácteres)"
