@@ -7,7 +7,6 @@ es:
   edit: "Editar"
   add: "Añadir"
 
-
   will_paginate:
     previous_label: "&#8592; Anterior"
     next_label: "Siguiente &#8594;"
