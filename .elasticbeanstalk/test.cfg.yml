@@ -2,7 +2,7 @@ EnvironmentConfigurationMetadata:
   Description: Configuration created from the EB CLI using "eb config save".
   DateCreated: '1446494808000'
   DateModified: '1446494808000'
-SolutionStack: 64bit Amazon Linux 2015.03 v2.0.1 running Ruby 2.2 (Puma)
+SolutionStack: 64bit Amazon Linux 2015.09 v2.0.4 running Ruby 2.2 (Puma)
 OptionSettings:
   aws:elasticbeanstalk:command:
     BatchSize: '30'
