@@ -26,4 +26,4 @@ es:
     update:
       updated_ingredient: "Ingrediente modificado"
     destroy:
-      delete_ingredient: "Ingredient eliminado"
+      delete_ingredient: "Ingrediente eliminado"
