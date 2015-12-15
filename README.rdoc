@@ -1,5 +1,5 @@
-== README
-# To configure the application using AWS Elastic Beanstalk:
+
+== AWS Elastic Beanstalk configuration
 
 - To create the application for first time you have to run <tt> eb init </tt> in the project root directory and follow de wizard.
 
@@ -10,12 +10,12 @@ If you want to set a different password or a secret key (for a PROD environment)
 
 - To deploy changes to an existing environment run <tt> eb deploy </tt>.
 
-# To configure the application in your development machine:
+== Development configuration:
 
-- Configure Rails:  [Rails Installation Tutorial!](http://installrails.com/).
-- To install gems: *bundle install --without production*
-- To launch migrate database files: *rake db:migrate*
-- To launch migrate database files reseting the database: *rake db:migrate:reset*
-- To create test data: *rake db:seed*
-- To launch the server: *rails server*
-- To launch tests: *rake test*
+- Configure Rails: See Rails Installation Tutorial[http://installrails.com/].
+- To install gems: <tt> bundle install --without production </tt>
+- To launch migrate database files: <tt> rake db:migrate </tt>
+- To launch migrate database files reseting the database: <tt> rake db:migrate:reset </tt>
+- To create test data: <tt> rake db:seed </tt>
+- To launch the server: <tt> rails server </tt>
+- To launch tests: <tt> rake test </tt> 
