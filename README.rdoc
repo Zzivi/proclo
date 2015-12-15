@@ -1,11 +1,21 @@
 == README
-This application uses AWS Elastic Beanstalk.
+# To configure the application using AWS Elastic Beanstalk:
 
-To create the application for first time you have to run <tt> eb init </tt> in the project root directory and follow de wizard.
+- To create the application for first time you have to run <tt> eb init </tt> in the project root directory and follow de wizard.
 
-To create a new environment in the application run the command
+- To create a new environment in the application run the command
 <tt> eb create --cfg test  --timeout 30 </tt>. This will create a prod type environment with a postgresql rds as a database.
 If you want to set a different password or a secret key (for a PROD environment) you can pass them as parameters:
 <tt> eb create --cfg test  --timeout 30 --envvars SECRET_KEY_BASE=`rake secret` --database.password=MyDaniPassword </tt>.
 
-To deploy changes to an existing environment run <tt> eb deploy </tt>.
+- To deploy changes to an existing environment run <tt> eb deploy </tt>.
+
+# To configure the application in your development machine:
+
+- Configure Rails:  [Rails Installation Tutorial!](http://installrails.com/).
+- To install gems: *bundle install --without production*
+- To launch migrate database files: *rake db:migrate*
+- To launch migrate database files reseting the database: *rake db:migrate:reset*
+- To create test data: *rake db:seed*
+- To launch the server: *rails server*
+- To launch tests: *rake test*
