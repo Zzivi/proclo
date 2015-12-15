@@ -1,12 +1,12 @@
 <div class="center jumbotron">
-  <h1>Proclo App</h1>
+  <h1> <%= t('static_pages.home.header') %> </h1>
   <p>
-    This is the home page for the Proclo application.
+    <%= t('static_pages.home.introduction') %>
   </p>
-  <p>     
-    List of current ingredients: <%= link_to "Ingredients", ingredients_path %>
+  <p>
+    <%= link_to t('ingredients.index.title'), ingredients_path %>
   </p>
-  <p>     
-    Add new ingredient: <%= link_to "Add", new_ingredient_path %>
+  <p>
+    <%= link_to t('ingredients.new.title'), new_ingredient_path %>
   </p>
 </div>
