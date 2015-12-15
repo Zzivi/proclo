@@ -15,7 +15,7 @@ class IngredientsController < ApplicationController
   def create
   	@ingredient = Ingredient.new(ingredient_params)
   	if @ingredient.save
-      flash[:success] = "New ingredient added!"
+      flash[:success] = t('.new_ingredient')
       redirect_to @ingredient
     else
       render 'new'
@@ -29,7 +29,7 @@ class IngredientsController < ApplicationController
   def update
     @ingredient = Ingredient.find(params[:id])
     if @ingredient.update_attributes(ingredient_params)
-      flash[:success] = "Ingredient updated!"
+      flash[:success] = t('.updated_ingredient')
       redirect_to @ingredient
     else
       render 'edit'
@@ -39,7 +39,7 @@ class IngredientsController < ApplicationController
   def destroy
     @ingredient = Ingredient.find(params[:id])
     @ingredient.destroy
-    flash[:success] = "Ingredient deleted!"
+    flash[:success] = t('.delete_ingredient')
     redirect_to root_url
   end
 

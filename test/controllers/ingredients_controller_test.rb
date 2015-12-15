@@ -5,6 +5,14 @@ class IngredientsControllerTest < ActionController::TestCase
   def setup
     @ingredient       = ingredients(:lettuce)
     @other_ingredient = ingredients(:orange)
+    @base_title = I18n.t('base_title')
+  end
+
+  test "should get index" do
+    get :index
+    assert_response :success
+    assert_select 'title', "#{I18n.t('ingredients.index.title')} | #{@base_title}"
+    assert_select 'h1', I18n.t('ingredients.index.title')
   end
 
   test "index" do
@@ -19,6 +27,8 @@ class IngredientsControllerTest < ActionController::TestCase
   test "should get new" do
     get :new
     assert_response :success
+    assert_select 'title', "#{I18n.t('ingredients.new.title')} | #{@base_title}"
+    assert_select 'h1', I18n.t('ingredients.new.title')
   end
 
   test "invalid add ingredient" do
@@ -35,7 +45,7 @@ class IngredientsControllerTest < ActionController::TestCase
                                   description: "Example ingredient"}
     end
     assert_redirected_to ingredient_path(assigns(:ingredient))
-    assert_equal 'New ingredient added!', flash[:success]
+    assert_equal I18n.t('ingredients.create.new_ingredient'), flash[:success]
   end
 
   test "valid delete ingredient" do
@@ -43,7 +53,7 @@ class IngredientsControllerTest < ActionController::TestCase
       delete :destroy, id: @ingredient
     end
     assert_redirected_to root_url
-    assert_equal 'Ingredient deleted!', flash[:success]
+    assert_equal I18n.t('ingredients.destroy.delete_ingredient'), flash[:success]
   end
 
   test "should get show" do
@@ -55,13 +65,15 @@ class IngredientsControllerTest < ActionController::TestCase
 
   test "should get edit" do
     get :edit, id: @ingredient
+    assert_select 'title', "#{I18n.t('ingredients.edit.title')} | #{@base_title}"
+    assert_select 'h1', I18n.t('ingredients.edit.title')
     assert_response :success
   end
 
   test "valid update ingredient" do
     patch :update, id: @ingredient, ingredient: { name: "newname", description: "newdescription" }
     assert_redirected_to ingredient_path(assigns(:ingredient))
-    assert_equal 'Ingredient updated!', flash[:success]
+    assert_equal I18n.t('ingredients.update.updated_ingredient'), flash[:success]
   end
 
   test "invalid update ingredient with existing name" do

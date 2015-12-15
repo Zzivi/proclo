@@ -1,0 +1,20 @@
+# Translations used around the application
+es:
+  base_title: "Proclo App"
+  you_sure: "¿Estás seguro?"
+  save_changes: "Guardar cambios"
+  delete: "Borrar"
+  edit: "Editar"
+  add: "Añadir"
+
+  will_paginate:
+    previous_label: "&#8592; Anterior"
+    next_label: "Siguiente &#8594;"
+    page_gap: "&hellip;"
+
+  activerecord:
+    errors:
+      messages:
+        blank: "no puede estar vacío"
+        taken: "ya ha sido elegido"
+        too_long: "es demasiado largo (máximo es %{count} carácteres)"
