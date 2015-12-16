@@ -27,7 +27,8 @@ class IngredientTest < ActiveSupport::TestCase
   end
 
   test "measurement_type should have liquid as default value" do
-    assert_equal('liquid', @ingredient.measurement_type)
+    ingredient_with_default_values = ingredients(:ingredient_with_default_values)
+    assert_equal('liquid', ingredient_with_default_values.measurement_type)
   end
 
   test "measurement_type with an invalid value" do

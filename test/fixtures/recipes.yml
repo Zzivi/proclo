@@ -13,7 +13,7 @@ omelette:
   time: 15
 
 recipie_with_default_values:
-  name: example
+  name: example_with_default_values
 
 <% 30.times do |n| %>
 recipie_<%= n %>:
