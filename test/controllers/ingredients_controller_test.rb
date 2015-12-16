@@ -31,10 +31,11 @@ class IngredientsControllerTest < ActionController::TestCase
     assert_select 'h1', I18n.t('ingredients.new.title')
   end
 
-  test "invalid add ingredient" do
+  test "invalid add ingredient with null name" do
     assert_no_difference 'Ingredient.count' do
       post :create, ingredient: { name:  "",
-                               	  description: "Invalid ingredient"}
+                               	  description: "Invalid ingredient",
+                                  measurement_type: 'liquid'}
     end
     assert_template 'ingredients/new'
   end
@@ -42,7 +43,8 @@ class IngredientsControllerTest < ActionController::TestCase
   test "valid add ingredient" do
     assert_difference 'Ingredient.count', 1 do
       post :create, ingredient: { name:  "Example",
-                                  description: "Example ingredient"}
+                                  description: "Example ingredient",
+                                  measurement_type: 'unit'}
     end
     assert_redirected_to ingredient_path(assigns(:ingredient))
     assert_equal I18n.t('ingredients.create.new_ingredient'), flash[:success]
@@ -71,7 +73,7 @@ class IngredientsControllerTest < ActionController::TestCase
   end
 
   test "valid update ingredient" do
-    patch :update, id: @ingredient, ingredient: { name: "newname", description: "newdescription" }
+    patch :update, id: @ingredient, ingredient: { name: "newname", description: "newdescription", measurement_type: "unit" }
     assert_redirected_to ingredient_path(assigns(:ingredient))
     assert_equal I18n.t('ingredients.update.updated_ingredient'), flash[:success]
   end
