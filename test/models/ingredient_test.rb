@@ -30,6 +30,12 @@ class IngredientTest < ActiveSupport::TestCase
     assert_equal('liquid', @ingredient.measurement_type)
   end
 
+  test "measurement_type with an invalid value" do
+    assert_raises(ArgumentError) do
+      @ingredient.measurement_type = 'invalid_measurement_type'
+    end
+  end
+
   test "measurement_type liquid is valid value" do
     @ingredient.measurement_type = 'liquid'
     assert @ingredient.valid?

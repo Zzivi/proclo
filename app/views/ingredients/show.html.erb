@@ -1,4 +1,4 @@
-<%= @ingredient.name %>, <%= @ingredient.description %>
+<%= @ingredient.name %>, <%= @ingredient.description %>, <%= @ingredient.measurement_type %>
 <%= link_to t('delete'), @ingredient, method: :delete,
                                        data: { confirm: t('you_sure') } %>
 <%= link_to t('edit'), edit_ingredient_path(@ingredient) %>

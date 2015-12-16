@@ -12,6 +12,9 @@
       <%= f.label :description %>
       <%= f.text_field :description, class: 'form-control' %>
 
+        <%= f.label :measurement_type %><br>
+        <%= f.select :measurement_type, Ingredient.measurement_types.keys %>
+
       <%= f.submit t('.create_ingredient'), class: "btn btn-primary" %>
     <% end %>
   </div>
