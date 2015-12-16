@@ -25,4 +25,24 @@ class IngredientTest < ActiveSupport::TestCase
     @ingredient.save
     assert_not duplicate_ingredient.valid?
   end
+
+  test "measurement_type should have liquid as default value" do
+    assert_equal('liquid', @ingredient.measurement_type)
+  end
+
+  test "measurement_type liquid is valid value" do
+    @ingredient.measurement_type = 'liquid'
+    assert @ingredient.valid?
+  end
+
+  test "measurement_type weight is valid value" do
+    @ingredient.measurement_type = 'weight'
+    assert @ingredient.valid?
+  end
+
+  test "measurement_type unit is valid value" do
+    @ingredient.measurement_type = 'unit'
+    assert @ingredient.valid?
+  end
+
 end

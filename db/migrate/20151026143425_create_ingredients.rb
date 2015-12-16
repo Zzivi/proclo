@@ -3,7 +3,7 @@ class CreateIngredients < ActiveRecord::Migration
     create_table :ingredients do |t|
       t.string :name
       t.string :description
-
+      t.integer :measurement_type, default: 0, null: false
       t.timestamps null: false
     end
   end
