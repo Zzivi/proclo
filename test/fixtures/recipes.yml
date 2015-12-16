@@ -1,0 +1,24 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+pizza:
+  name: pizza
+  description: My fabulous pizza recipe
+  level: 2
+  time: 60
+
+omelette:
+  name: omelette
+  description: My omelette recipe
+  level: 1
+  time: 15
+
+recipie_with_default_values:
+  name: example
+
+<% 30.times do |n| %>
+recipie_<%= n %>:
+  name:  <%= "Recipe-#{n}" %>
+  description: <%= "Recipe-#{n} description" %>
+  level: 2
+  time: <%= n %>
+<% end %>
