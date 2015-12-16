@@ -1,21 +1,22 @@
 
 == AWS Elastic Beanstalk configuration
 
-- To create the application for first time you have to run <tt> eb init </tt> in the project root directory and follow de wizard.
+To create the application for first time you have to run <tt> eb init </tt> in the project root directory and follow de wizard.
 
-- To create a new environment in the application run the command
-<tt> eb create --cfg test  --timeout 30 </tt>. This will create a prod type environment with a postgresql rds as a database.
-If you want to set a different password or a secret key (for a PROD environment) you can pass them as parameters:
-<tt> eb create --cfg test  --timeout 30 --envvars SECRET_KEY_BASE=`rake secret` --database.password=MyDaniPassword </tt>.
+To create a new environment in the application run the command <tt> eb create --cfg test  --timeout 30 </tt>. This will create a prod type environment with a postgresql rds as a database.
+If you want to set a different password or a secret key (for a PROD environment) you can pass them as parameters: <tt> eb create --cfg test  --timeout 30 --envvars SECRET_KEY_BASE=`rake secret` --database.password=MyDaniPassword </tt>.
 
-- To deploy changes to an existing environment run <tt> eb deploy </tt>.
+To deploy changes to an existing environment run <tt> eb deploy </tt>.
+
 
 == Development configuration:
 
-- Configure Rails: See Rails Installation Tutorial[http://installrails.com/].
+- Configure Rails: {See Rails Installation Tutorial}[http://installrails.com/].
 - To install gems: <tt> bundle install --without production </tt>
 - To launch migrate database files: <tt> rake db:migrate </tt>
 - To launch migrate database files reseting the database: <tt> rake db:migrate:reset </tt>
 - To create test data: <tt> rake db:seed </tt>
 - To launch the server: <tt> rails server </tt>
-- To launch tests: <tt> rake test </tt> 
+- To launch tests manually: <tt> rake test </tt>
+- To launch tests automatically using Guard, open a new terminal and run it at the command line as follows: <tt> bundle exec guard </tt>.  To run all the tests, hit return at the guard> prompt.
+
