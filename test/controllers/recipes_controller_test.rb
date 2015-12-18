@@ -52,6 +52,15 @@ class RecipesControllerTest < ActionController::TestCase
     assert_template 'recipes/new'
   end
 
+  test "valid delete recipe" do
+    assert_difference 'Recipe.count', -1 do
+      delete :destroy, id: @recipe
+    end
+    assert_redirected_to root_url
+    assert_equal I18n.t('recipes.destroy.delete_recipe'), flash[:success]
+  end
+
+
   test "should get show" do
     get :show, id: @recipe
     assert_response :success
