@@ -51,4 +51,12 @@ class RecipesControllerTest < ActionController::TestCase
     end
     assert_template 'recipes/new'
   end
+
+  test "should get show" do
+    get :show, id: @recipe
+    assert_response :success
+    assert_select 'a[href=?]', recipe_path(@recipe)
+    assert_select 'a[href=?]', edit_recipe_path(@recipe)
+  end
+
 end

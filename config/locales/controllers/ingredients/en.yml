@@ -22,7 +22,6 @@
 en:
   ingredients:
     create:
-      create_ingredient: "Create my ingredient"
       new_ingredient: "New ingredient added"
     update:
       updated_ingredient: "Ingredient updated"

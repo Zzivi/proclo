@@ -4,6 +4,10 @@ class RecipesController < ApplicationController
     @recipes = Recipe.paginate(page: params[:page])
   end
 
+  def show
+    @recipe = Recipe.find(params[:id])
+  end
+
   def new
     @recipe = Recipe.new
   end

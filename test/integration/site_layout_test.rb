@@ -11,11 +11,13 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
   end
 
   test "ingredients links" do
+    get root_path
     assert_select "a[href=?]", ingredients_path
     assert_select "a[href=?]", new_ingredient_path
   end
 
   test "recipes links" do
+    get root_path
     assert_select "a[href=?]", recipes_path
     assert_select "a[href=?]", new_recipe_path
   end
