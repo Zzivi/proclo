@@ -66,4 +66,15 @@ class RecipesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "valid update recipe" do
+    patch :update, id: @recipe, recipe: { name: "newname", description: "newdescription", level: "medium", time: 88 }
+    assert_redirected_to recipe_path(assigns(:recipe))
+    assert_equal I18n.t('recipes.update.updated_recipe'), flash[:success]
+  end
+
+  test "invalid update recipe with existing name" do
+    patch :update, id: @recipe, recipe: { name: @other_recipe.name, description: "newdescription" }
+    assert_template 'recipes/edit'
+  end
+
 end
