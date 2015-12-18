@@ -4,6 +4,10 @@ class RecipesController < ApplicationController
     @recipes = Recipe.paginate(page: params[:page])
   end
 
+  def new
+    @recipe = Recipe.new
+  end
+  
   private
 
   def recipe_params

@@ -23,4 +23,11 @@ class RecipesControllerTest < ActionController::TestCase
     end
     assert_response :success
   end
+
+  test "should get new" do
+    get :new
+    assert_response :success
+    assert_select 'title', "#{I18n.t('recipes.new.title')} | #{@base_title}"
+    assert_select 'h1', I18n.t('recipes.new.title')
+  end
 end
