@@ -59,4 +59,11 @@ class RecipesControllerTest < ActionController::TestCase
     assert_select 'a[href=?]', edit_recipe_path(@recipe)
   end
 
+  test "should get edit" do
+    get :edit, id: @recipe
+    assert_select 'title', "#{I18n.t('recipes.edit.title')} | #{@base_title}"
+    assert_select 'h1', I18n.t('recipes.edit.title')
+    assert_response :success
+  end
+
 end
