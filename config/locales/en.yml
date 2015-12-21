@@ -18,3 +18,4 @@ en:
         blank: "can't be blank"
         taken: "has already been taken"
         too_long: "is too long (maximum is %{count} characters)"
+        not_a_number: "is not a number"

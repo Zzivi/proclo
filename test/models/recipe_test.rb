@@ -19,12 +19,21 @@ class RecipeTest < ActiveSupport::TestCase
     assert_not @recipe.valid?
   end
 
-
   test "name should be unique" do
     duplicate_recipe = @recipe.dup
     duplicate_recipe.name = @recipe.name.upcase
     @recipe.save
     assert_not duplicate_recipe.valid?
+  end
+
+  test "time should be present" do
+    @recipe.time = "     "
+    assert_not @recipe.valid?
+  end
+
+  test "time should be numeric" do
+    @recipe.time = "sometext"
+    assert_not @recipe.valid?
   end
 
   test "level should have easy as default value" do

@@ -26,4 +26,4 @@ en:
     update:
       updated_recipe: "Recipe updated"
     destroy:
-      delete_recip: "Recipe deleted"
+      delete_recipe: "Recipe deleted"
