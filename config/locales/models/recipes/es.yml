@@ -1,0 +1,8 @@
+es:
+  activerecord:
+    attributes:
+      recipe:
+        name: "Nombre"
+        description: "Descripción"
+        level: "Nivel de dificultad"
+        time: "Tiempo de preparación"

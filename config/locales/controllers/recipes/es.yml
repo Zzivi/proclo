@@ -19,17 +19,11 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  static_pages:
-    home:
-      title: "Home"
-      header: "Proclo App"
-      introduction: "This is the home page for the Proclo application."
-    help:
-      title: "Help"
-      header: "Help page header"
-      content: "Help page content"
-    about:
-      title: "About"
-      header: "About page header"
-      content: "About page content"
+es:
+  recipes:
+    create:
+      new_recipe: "Nueva receta añadida"
+    update:
+      updated_recipe: "Receta modificada"
+    destroy:
+      delete_recipe: "Receta eliminada"
