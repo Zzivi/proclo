@@ -1,0 +1,2 @@
+module IngredientQuantitiesHelper
+end

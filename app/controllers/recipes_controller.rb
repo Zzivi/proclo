@@ -6,6 +6,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    @ingredient_quantities = @recipe.ingredient_quantities.paginate(page: params[:page])
   end
 
   def new

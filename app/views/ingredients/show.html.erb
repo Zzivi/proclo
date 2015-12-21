@@ -1,4 +1,19 @@
-<%= @ingredient.name %>, <%= @ingredient.description %>, <%= @ingredient.measurement_type %>
-<%= link_to t('delete'), @ingredient, method: :delete,
-                                       data: { confirm: t('you_sure') } %>
-<%= link_to t('edit'), edit_ingredient_path(@ingredient) %>
+<% provide(:title, @ingredient.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= t('activerecord.attributes.ingredient.name') %> <%= @ingredient.name %>
+      </h1>
+      <h2>
+        <%= t('activerecord.attributes.ingredient.description') %> <%= @ingredient.description %>
+        <%= t('activerecord.attributes.ingredient.measurement_type') %> <%= @ingredient.measurement_type %>
+      </h2>
+      <h3>
+        <%= link_to t('delete'), @ingredient, method: :delete,
+                    data: { confirm: t('you_sure') } %>
+        <%= link_to t('edit'), edit_ingredient_path(@ingredient) %>
+      </h3>
+    </section>
+  </aside>
+</div>

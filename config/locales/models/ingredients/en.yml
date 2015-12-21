@@ -4,3 +4,4 @@ en:
       ingredient:
         name: "Name"
         description: "Description"
+        measurement_type: "Measurement type"
