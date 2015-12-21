@@ -12,8 +12,11 @@ omelette:
   level: 1
   time: 15
 
-recipie_with_default_values:
+recipe_with_default_values:
   name: example_with_default_values
+
+recipe_without_ingredients:
+  name: example_without_ingredients
 
 <% 30.times do |n| %>
 recipie_<%= n %>:

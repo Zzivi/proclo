@@ -37,8 +37,8 @@ class RecipeTest < ActiveSupport::TestCase
   end
 
   test "level should have easy as default value" do
-    recipie_with_default_values = recipes(:recipie_with_default_values)
-    assert_equal('easy', recipie_with_default_values.level)
+    recipe_with_default_values = recipes(:recipe_with_default_values)
+    assert_equal('easy', recipe_with_default_values.level)
   end
 
   test "level with an invalid value" do
@@ -64,10 +64,11 @@ class RecipeTest < ActiveSupport::TestCase
 
   test "associated ingredient_quantites should be destroyed" do
     ingredient = ingredients(:lettuce)
-    @recipe.save
-    @recipe.ingredient_quantities.create!(quantity: 10, ingredient_id: ingredient.id)
+    recipe = recipes(:recipe_without_ingredients)
+    recipe.save
+    recipe.ingredient_quantities.create!(quantity: 10, ingredient_id: ingredient.id)
     assert_difference 'IngredientQuantity.count', -1 do
-      @recipe.destroy
+      recipe.destroy
     end
   end
 end

@@ -8,6 +8,14 @@ orange:
   name: orange
   description: Orange fruit
 
+cheese:
+  name: cheese
+  description: Cow fruit
+
+ham:
+  name: ham
+  description: Pork fruit
+
 car:
   name: car
   description: This is not an ingredient!
