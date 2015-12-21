@@ -12,6 +12,9 @@ car:
   name: car
   description: This is not an ingredient!
 
+ingredient_with_default_values:
+  name: example_with_default_values
+
 <% 30.times do |n| %>
 ingredient_<%= n %>:
   name:  <%= "Ingredient-#{n}" %>

@@ -1,0 +1,4 @@
+<%= @recipe.name %>, <%= @recipe.description %>, <%= @recipe.time %>, <%= @recipe.level %>
+<%= link_to t('delete'), @recipe, method: :delete,
+                                       data: { confirm: t('you_sure') } %>
+<%= link_to t('edit'), edit_recipe_path(@recipe) %>

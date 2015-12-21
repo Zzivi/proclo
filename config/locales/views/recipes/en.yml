@@ -20,16 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  static_pages:
-    home:
-      title: "Home"
-      header: "Proclo App"
-      introduction: "This is the home page for the Proclo application."
-    help:
-      title: "Help"
-      header: "Help page header"
-      content: "Help page content"
-    about:
-      title: "About"
-      header: "About page header"
-      content: "About page content"
+  recipes:
+    index:
+      title: "Recipes list"
+    new:
+      title: "Add recipe"
+      create_recipe: "Create my recipe"
+    edit:
+      title: "Edit recipe"
+

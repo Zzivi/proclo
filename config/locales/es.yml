@@ -18,3 +18,4 @@ es:
         blank: "no puede estar vacío"
         taken: "ya ha sido elegido"
         too_long: "es demasiado largo (máximo es %{count} carácteres)"
+        not_a_number: "no es numérico"

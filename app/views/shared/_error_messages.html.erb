@@ -1,12 +1,12 @@
-<% if @ingredient.errors.any? %>
-  <div id="error_explanation">
-    <div class="alert alert-danger">
-      <%= t('.form_contains') %> <%= @ingredient.errors.count %> <%= t('.error').pluralize(@ingredient.errors.count, I18n.locale) %>.
+<% if object.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-danger">
+        <%= t('.form_contains') %> <%= object.errors.count %> <%= t('.error').pluralize(object.errors.count, I18n.locale) %>.
+      </div>
+      <ul>
+        <% object.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
     </div>
-    <ul>
-    <% @ingredient.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
 <% end %>
