@@ -62,4 +62,12 @@ class RecipeTest < ActiveSupport::TestCase
     assert @recipe.valid?
   end
 
+  test "associated ingredient_quantites should be destroyed" do
+    ingredient = ingredients(:lettuce)
+    @recipe.save
+    @recipe.ingredient_quantities.create!(quantity: 10, ingredient_id: ingredient.id)
+    assert_difference 'IngredientQuantity.count', -1 do
+      @recipe.destroy
+    end
+  end
 end
